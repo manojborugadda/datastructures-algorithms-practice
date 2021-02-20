@@ -28,13 +28,12 @@ using namespace std;
    for(int i = k;i < n;i++)
    {
        curr_sum = curr_sum + arr[i] - arr[i-k];
-   }
-
+     
    if(curr_sum >max)
    {
        max = curr_sum;
    }
-
+   }
    cout<<max<<endl;
   }
   return 0;
