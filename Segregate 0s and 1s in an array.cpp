@@ -1,36 +1,43 @@
+/*You are given an array of 0's and 1's in random order.
+Segregate 0's on left side and 1's on right side of the array.
+Traverse array only once.
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
+void segregate0and1(int arr[],int n)
+{
+    int left = 0;
+    int right = n-1;
+    while(left < right)
+    {
+        if(arr[left] == 1)
+        {
+            swap(arr[left],arr[right]);
+            right--;
+        }
+        else
+        {
+            left++;
+        }
+
+    }
+
+}
 int main()
 {
-int n,m,arr[100][100];
-int t;
-cin>>t;
-while(t--)
-{
-    cin>>n>>m;
+    int n;
+    cin>>n;
+    int arr[n];
     for(int i=0;i<n;i++)
     {
-        for(int j=0;j<m;j++)
-        {
-            cin>>arr[i][j];
-        }
+        cin>>arr[i];
     }
-      int j = m-1;
-    while(j>=0 && arr[0][j]==1){
-        j--;
-    }
-    int row = 0;
-
-    for(int i=1;i<n;i++){
-
-        while(j>=0 && arr[i][j]==1){
-            j--;
-            row = i;
-        }
-    }
-    int a = (j == m-1 ? -1 : row);
-    cout<<a;
-
+    segregate0and1(arr,n);
+    cout<<"after segregating of 0's and 1's  : ";
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
     }
 
 return 0;
