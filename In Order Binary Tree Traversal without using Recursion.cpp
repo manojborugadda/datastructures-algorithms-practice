@@ -37,28 +37,27 @@ node *insert_node(node*root ,int data )          ///inserting the nodes---------
     return root;
 }
 
-void PreOrder(node *root)
+void InOrder(node *root)
 {
-   if(root == NULL)
-   {
-       return;
-   }
-   stack<node *>s;
-   s.push(root);
-   while(s.empty()==false)
-   {
-       node *curr = s.top();
-       cout<<curr->data<<" ";
-       s.pop();
-       if(curr->right)
-       {
-        s.push(curr->right);
-       }
-       if(curr->left)
-       {
-           s.push(curr->left);
-       }
-   }
+    stack<node *> s;
+    node *curr = root;
+
+    while (curr != NULL || s.empty() == false)
+    {
+        /// Reach the left most Node of the "curr" Node
+        while (curr !=  NULL)
+        {
+            s.push(curr);
+            curr = curr->left;
+        }
+        ///  Current must be NULL at this point
+        curr = s.top();
+        s.pop();
+
+        cout << curr->data << " ";
+
+        curr = curr->right; /// we have visited the node and its  left subtree.  Now, it's right subtree's turn
+    }
 
 }
 
@@ -75,7 +74,7 @@ int main()
     root = insert_node(root,25);
 
     cout<<"\nInOrder Traversal of the binary  tree is : \n";
-    PreOrder(root);
+    InOrder(root);
 
     return 0;
 }
