@@ -74,7 +74,7 @@ int main()
     root = insert_node(root,17);
     root = insert_node(root,25);
 
-    cout<<"\nInOrder Traversal of the binary  tree is : \n";
+    cout<<"\nPreOrder Traversal of the binary  tree is : \n";
     PreOrder(root);
 
     return 0;
