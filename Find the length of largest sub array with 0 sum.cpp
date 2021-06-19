@@ -46,3 +46,6 @@ int main()
     cout<<"Length of the longest 0 sum sub array is "<<Largestsubarr(arr,n)<<endl;
     return 0;
 }
+
+Time Complexity - O(N)
+Space Complexity - O(N)
