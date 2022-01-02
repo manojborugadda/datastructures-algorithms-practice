@@ -40,3 +40,6 @@ int main()
     cout<<"Number of subarrays having sum exactly equal to 'K' is "<<Findsubarr(arr,n,k)<<endl;
     return 0;
 }
+
+
+// for reference https://www.youtube.com/watch?v=HbbYPQc-Oo4
