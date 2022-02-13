@@ -1,4 +1,4 @@
-/// KADANE'S ALGORITHM  by "tech dose" YouTube channel
+/// KADANE'S ALGORITHM 
 
 /// Write an efficient program to find the sum of contiguous sub array
 /// within a one-dimensional array of numbers that has the largest sum.
