@@ -8,20 +8,16 @@
 using namespace std;
 int maxSubArraySum(int a[],int m)
 {
-    int max_end_here = 0,max_so_far = INT_MIN;
+    int curr_sum = 0,max_sum = INT_MIN;
     for(int i=0;i<m;i++)
     {
-        max_end_here = max_end_here+a[i];
-        if(max_end_here < a[i])
-        {
-          max_end_here = a[i];
-        }
-        if(max_so_far < max_end_here)
-        {
-          max_so_far = max_end_here;
+        curr_sum = curr_sum+a[i];
+        max_sum = max(curr_sum,max_sum);
+        if(curr_sum  < 0 ){
+            curr_sum = 0;
         }
     }
-    return max_so_far;
+    return max_sum;
 }
 /// sample input : -2, -3, 4, -1, -2, 1, 5, -3
 /// output : 7
