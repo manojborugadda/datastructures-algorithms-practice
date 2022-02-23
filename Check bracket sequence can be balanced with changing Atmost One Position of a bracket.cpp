@@ -9,6 +9,7 @@ bool canBeBalanced(string s, int n)
 	// the frequencies of '(' and ')' and
 	// count_1 is to find the minimum value
 	// of freq('(') - freq(')')
+	
 	int count = 0, count_1 = 0;
 
 	// Traverse the given string
