@@ -19,8 +19,7 @@ for(int i = 0;i<n;i++)
     else
         unlucky++;
 }
-if(lucky>unlucky)
-{
+if(lucky>unlucky) {
     cout<<"READY FOR BATTLE"<<endl;
 }
 else
