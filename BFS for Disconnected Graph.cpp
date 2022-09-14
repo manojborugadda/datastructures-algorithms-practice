@@ -7,6 +7,7 @@ void addEdge(vector<int>adj[],int u , int v) {
     adj[u].push_back(v);
 }
 
+
 // A utility function to do BFS of graph
 // from a given vertex u.
 void BFSUtil(int s , vector<int>adj[] , vector<bool> &visited) {
