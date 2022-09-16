@@ -8,6 +8,7 @@ Note: You may not engage in multiple transactions simultaneously (i.e., you must
 ///Input: prices = [7,1,5,3,6,4]
 /// Output: 7 ............which came from addition of 5-1,6-3..........
 
+
     #include <bits/stdc++.h>
     using namespace std;
     int  maxProfit(int prices[],int n)
