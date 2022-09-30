@@ -47,7 +47,7 @@ int main()
             min=right-left+1;
         }
     }
-        cout<<min<<endl;
+       cout<<min<<endl;
         return 0;
   }
 
