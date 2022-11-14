@@ -33,7 +33,7 @@ void Union(int a,int b) {
 }
 
 
-//DRIVER CLASS
+//DRIVER CLASS 
 int main() {
   int n,k;
   cin>>n>>k;
@@ -54,7 +54,6 @@ int main() {
   }
 cout<< connected_count<<endl;
  // return  connected_count;
-  
 }
 
 
