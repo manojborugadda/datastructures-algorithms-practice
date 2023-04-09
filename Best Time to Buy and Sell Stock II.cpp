@@ -13,7 +13,7 @@ Note: You may not engage in multiple transactions simultaneously (i.e., you must
     using namespace std;
     int  maxProfit(int prices[],int n)
     {
-        int maxprofit = 0;
+        int maxprofit = 0; 
         for( int i=1;i<n;i++)
         {
            if(prices[i]>prices[i-1])
