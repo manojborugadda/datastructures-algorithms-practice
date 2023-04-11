@@ -1,21 +1,18 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-typedef struct Node
-{
+typedef struct Node { 
     int data;
     Node *next;
 }Node;
 Node *head = NULL;
 Node *tail = NULL;
 
-void insert_at_Begin(int data)
- {
+void insert_at_Begin(int data) {
    Node *new_node = (Node*)malloc(sizeof(Node));
    new_node->data = data;
    new_node->next = NULL;
-   if(head == nullptr)
-   {
+   if(head == nullptr) {
        head = new_node;
        tail = new_node;
        return;
@@ -24,11 +21,9 @@ void insert_at_Begin(int data)
    head = new_node;
    tail->next = head;
  }
- void delete_at_Begin()
- {
+ void delete_at_Begin() {
     Node *temp = head;
-    if(temp == nullptr)
-    {
+    if(temp == nullptr) {
         cout<<"the linked list is empty"<<"\n";
         return;
     }
@@ -38,23 +33,19 @@ void insert_at_Begin(int data)
     free(temp);
  }
 
- void delete_at_End()
- {
+ void delete_at_End() {
       Node *temp = head;
-    if(temp == nullptr)
-    {
+    if(temp == nullptr) {
         cout<<"the linked list is empty"<<"\n";
         return;
     }
-    if(temp->next == nullptr)
-    {
+    if(temp->next == nullptr) {
         head = NULL;
         tail = NULL;
         free(temp);
         return;
     }
-    while(temp->next->next!= head)
-    {
+    while(temp->next->next!= head) {
         temp = temp->next;
     }
     Node *temp1 = tail;
@@ -64,29 +55,24 @@ void insert_at_Begin(int data)
     free(temp1);
  }
 
- void delete_at_Mid(int pos)
- {
+ void delete_at_Mid(int pos) {
      Node *temp = head;
-    if(temp == NULL)
-    {
+    if(temp == NULL) {
         cout<<"the linked list is empty"<<"\n";
         return;
     }
-     if(temp->next == NULL)
-    {
+     if(temp->next == NULL) {
         head = NULL;
         tail = NULL;
         free(temp);
         return;
     }
     int count = 1;
-    while(count<pos-1 && temp->next!= head)
-    {
+    while(count<pos-1 && temp->next!= head) {
         count++;
         temp = temp->next;
     }
-    if(temp->next == head)
-    {
+    if(temp->next == head) {
         Node *temp1 = tail;
         temp->next = head;
         tail = temp;
@@ -98,8 +84,7 @@ void insert_at_Begin(int data)
     free(temp1);
  }
 
- void display()
- {
+ void display() {
      Node *temp = head;
      do{
         cout<<"address : "<<temp<<"\n";
