@@ -5,7 +5,7 @@ int main()
 {
 int n,lucky = 0 , unlucky = 0;
 cin>>n; 
-int arr[n];
+int arr[n]; 
 for(int i = 0;i<n;i++)
 {
     cin>>arr[i];
