@@ -4,7 +4,7 @@ using namespace std;
                                   /// Time complexity - O(n)
 struct TreeNode
 {
-    char val;
+    char val; 
     TreeNode* left;
     TreeNode* right;
 
