@@ -1,5 +1,5 @@
 
-//              ******Given an array arr[], find the maximum j – i such that arr[j] > arr[i] *****************
+//              ******Given an array arr[], find the maximum j â€“ i such that arr[j] > arr[i] *****************
 
 #include<iostream>
 #include<bits/stdc++.h>
@@ -23,8 +23,7 @@ using namespace std;
        }
        // traversing the both arrays from left to right to find the maximum (j-i)
        i=0,j=0,maxDiff = -1;
-       while(i<n && j<n)
-       {
+       while(i<n && j<n) {
            if(Lmin[i]<Rmax[j])
            {
                maxDiff = max(maxDiff,j-i);
