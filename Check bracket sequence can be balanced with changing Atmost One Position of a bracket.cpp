@@ -3,7 +3,7 @@
 using namespace std;
 // Function that returns true if
 // the string can be balanced
-bool canBeBalanced(string s, int n)
+bool canBeBalanced(string s, int n) 
 {
 	// Count to check the difference between
 	// the frequencies of '(' and ')' and
