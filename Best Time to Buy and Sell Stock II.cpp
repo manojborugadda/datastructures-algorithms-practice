@@ -11,29 +11,23 @@ Note: You may not engage in multiple transactions simultaneously (i.e., you must
 
     #include <bits/stdc++.h>
     using namespace std;
-    int  maxProfit(int prices[],int n)
-    {
+    int  maxProfit(int prices[],int n) {
         int maxprofit = 0; 
-        for( int i=1;i<n;i++)
-        {
-           if(prices[i]>prices[i-1])
-              {
+        for( int i=1;i<n;i++) {
+           if(prices[i]>prices[i-1]) {
                 maxprofit = maxprofit+(prices[i]-prices[i-1]);
               }
         }
         return maxprofit;
     }
-  int main()
-  {
+  int main() {
     int t;
     cin>>t;
-    while(t--)
-  {
+    while(t--) {
     int n;
     cin>>n;
     int arr[n];
-    for(int i=0;i<n;i++)
-    {
+    for(int i=0;i<n;i++) {
         cin>>arr[i];
     }
     cout<<maxProfit(arr,n)<<endl;
