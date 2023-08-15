@@ -1,5 +1,5 @@
 //https://www.hackerearth.com/practice/data-structures/arrays/1-d/practice-problems/algorithm/speed-7/
-
+//https://www.youtube.com/watch?v=5cLMiJx44-E
 
 #include <iostream>
 using namespace std;
