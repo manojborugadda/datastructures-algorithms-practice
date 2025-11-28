@@ -33,3 +33,14 @@ public:
         return solve(0,0,0,grid,k,dp);
     }
 };
+
+/*
+Time Complexity: O(m×n×k)
+Space Complexity: O(m×n×k)
+This is because:
+Each cell 
+(i,j) can have k possible remainders.
+You fill each DP state once, and each state takes constant time
+
+
+**/
